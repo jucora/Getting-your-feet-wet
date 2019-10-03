@@ -1,0 +1,281 @@
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCars (20190930203520)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cars" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "make" varchar, "model" varchar, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190930203520"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2019-10-03 03:07:01.456294"], ["updated_at", "2019-10-03 03:07:01.456294"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "cars";
+INSERT INTO "cars" ("id", "make", "model", "year", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2019-10-03 03:07:07.471006', '2019-10-03 03:07:07.471006');
+INSERT INTO "cars" ("id", "make", "model", "year", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2019-10-03 03:07:07.471006', '2019-10-03 03:07:07.471006')[0m
+  [1m[35m (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+CarsControllerTest: test_should_get_index
+-----------------------------------------
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "cars";
+INSERT INTO "cars" ("id", "make", "model", "year", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2019-10-03 03:07:07.499717', '2019-10-03 03:07:07.499717');
+INSERT INTO "cars" ("id", "make", "model", "year", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2019-10-03 03:07:07.499717', '2019-10-03 03:07:07.499717')[0m
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CarsControllerTest: test_should_destroy_car
+-------------------------------------------
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+Started DELETE "/cars/980190962" for 127.0.0.1 at 2019-10-02 22:07:07 -0500
+Started GET "/cars" for 127.0.0.1 at 2019-10-02 22:07:07 -0500
+Processing by CarsController#index as HTML
+Processing by CarsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cars" WHERE "cars"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/cars
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1347)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CarsControllerTest: test_should_get_new
+---------------------------------------
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+Started GET "/cars/new" for 127.0.0.1 at 2019-10-02 22:07:07 -0500
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3607)
+  Rendered cars/_form.html.erb (Duration: 240.7ms | Allocations: 288666)
+  Rendered cars/new.html.erb within layouts/application (Duration: 243.2ms | Allocations: 289238)
+[Webpacker] Compiling…
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/julian/Escritorio/Microverse/Getting-your-feet-wet/first rails app/public/packs-test
+[Webpacker] Compiled all packs in /home/julian/Escritorio/Microverse/Getting-your-feet-wet/first rails app/public/packs-test
+Completed 200 OK in 16780ms (Views: 16779.2ms | ActiveRecord: 0.0ms | Allocations: 2222126)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 16849ms (Views: 16813.7ms | ActiveRecord: 0.2ms | Allocations: 2230294)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+CarsControllerTest: test_should_show_car
+CarsControllerTest: test_should_update_car
+----------------------------------------
+------------------------------------------
+  [1m[36mCar Load (15.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/cars/980190962" for 127.0.0.1 at 2019-10-02 22:07:24 -0500
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/cars/980190962" for 127.0.0.1 at 2019-10-02 22:07:24 -0500
+Processing by CarsController#update as HTML
+  Parameters: {"car"=>{"make"=>"MyString", "model"=>"MyString", "year"=>"1"}, "id"=>"980190962"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/cars/980190962
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 771)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CarsControllerTest: test_should_get_edit
+----------------------------------------
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/cars/980190962/edit" for 127.0.0.1 at 2019-10-02 22:07:24 -0500
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/application
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/show.html.erb within layouts/application (Duration: 31.6ms | Allocations: 485)
+Completed 200 OK in 49ms (Views: 34.3ms | ActiveRecord: 0.2ms | Allocations: 6014)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+CarsControllerTest: test_should_create_car
+------------------------------------------
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+Started POST "/cars" for 127.0.0.1 at 2019-10-02 22:07:24 -0500
+Processing by CarsController#create as HTML
+  Parameters: {"car"=>{"make"=>"MyString", "model"=>"MyString", "year"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (27.7ms)[0m  [1m[32mINSERT INTO "cars" ("make", "model", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "MyString"], ["model", "MyString"], ["year", 1], ["created_at", "2019-10-03 03:07:24.788904"], ["updated_at", "2019-10-03 03:07:24.788904"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendered cars/_form.html.erb (Duration: 1.6ms | Allocations: 919)
+  Rendered cars/edit.html.erb within layouts/application (Duration: 60.1ms | Allocations: 5278)
+Redirected to http://www.example.com/cars/980190963
+Completed 302 Found in 32ms (ActiveRecord: 27.9ms | Allocations: 1985)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY "cars"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 79ms (Views: 65.4ms | ActiveRecord: 0.1ms | Allocations: 8655)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (20.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "cars";
+INSERT INTO "cars" ("id", "make", "model", "year", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2019-10-03 03:07:43.905794', '2019-10-03 03:07:43.905794');
+INSERT INTO "cars" ("id", "make", "model", "year", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2019-10-03 03:07:43.905794', '2019-10-03 03:07:43.905794')[0m
+  [1m[35m (53.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "cars";
+INSERT INTO "cars" ("id", "make", "model", "year", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2019-10-03 03:07:43.908640', '2019-10-03 03:07:43.908640');
+INSERT INTO "cars" ("id", "make", "model", "year", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2019-10-03 03:07:43.908640', '2019-10-03 03:07:43.908640')[0m
+----------------------------------------
+CarsControllerTest: test_should_show_car
+----------------------------------------
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+CarsControllerTest: test_should_get_edit
+----------------------------------------
+Started GET "/cars/980190962" for 127.0.0.1 at 2019-10-02 22:07:44 -0500
+Processing by CarsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/cars/980190962/edit" for 127.0.0.1 at 2019-10-02 22:07:44 -0500
+Processing by CarsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering cars/show.html.erb within layouts/application
+  Rendering cars/edit.html.erb within layouts/application
+  Rendered cars/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 506)
+  Rendered cars/_form.html.erb (Duration: 277.0ms | Allocations: 285757)
+  Rendered cars/edit.html.erb within layouts/application (Duration: 279.4ms | Allocations: 286455)
+Completed 200 OK in 4029ms (Views: 4027.0ms | ActiveRecord: 0.1ms | Allocations: 2177380)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 4066ms (Views: 4057.3ms | ActiveRecord: 0.1ms | Allocations: 2180106)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+CarsControllerTest: test_should_create_car
+------------------------------------------
+CarsControllerTest: test_should_get_index
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+-----------------------------------------
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/cars" for 127.0.0.1 at 2019-10-02 22:07:48 -0500
+Processing by CarsController#create as HTML
+  Parameters: {"car"=>{"make"=>"MyString", "model"=>"MyString", "year"=>"1"}}
+Started GET "/cars" for 127.0.0.1 at 2019-10-02 22:07:48 -0500
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Processing by CarsController#index as HTML
+  [1m[36mCar Create (0.2ms)[0m  [1m[32mINSERT INTO "cars" ("make", "model", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["make", "MyString"], ["model", "MyString"], ["year", 1], ["created_at", "2019-10-03 03:07:48.207423"], ["updated_at", "2019-10-03 03:07:48.207423"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/cars/980190963
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1231)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY "cars"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering cars/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+CarsControllerTest: test_should_update_car
+------------------------------------------
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/cars/980190962" for 127.0.0.1 at 2019-10-02 22:07:48 -0500
+Processing by CarsController#update as HTML
+  Parameters: {"car"=>{"make"=>"MyString", "model"=>"MyString", "year"=>"1"}, "id"=>"980190962"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/cars/980190962
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 635)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+CarsControllerTest: test_should_destroy_car
+-------------------------------------------
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+Started DELETE "/cars/980190962" for 127.0.0.1 at 2019-10-02 22:07:48 -0500
+Processing by CarsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Destroy (0.1ms)[0m  [1m[31mDELETE FROM "cars" WHERE "cars"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/cars
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 627)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "cars"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+CarsControllerTest: test_should_get_new
+---------------------------------------
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/cars/new" for 127.0.0.1 at 2019-10-02 22:07:48 -0500
+Processing by CarsController#new as HTML
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 6925)
+  Rendered cars/_form.html.erb (Duration: 1.3ms | Allocations: 871)
+  Rendered cars/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1853)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4764)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.1ms | Allocations: 11988)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
